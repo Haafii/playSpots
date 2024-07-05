@@ -31,8 +31,10 @@ const VenueList = () => {
     }
     return [...sortVenuesByDistance(left), pivot, ...sortVenuesByDistance(right)];
   };
+
   const sortedVenues = sortVenuesByDistance(venues);
   // console.log(sortedVenues)
+
   const addFavorite = async (venue) => {
     try {
       const storedFavorites = await AsyncStorage.getItem('favorites');
@@ -64,6 +66,7 @@ const VenueList = () => {
   }, [favorites]);
 
   // console.log(favorites)
+  
   return (
     <View style={styles.container}>
       <FlatList
