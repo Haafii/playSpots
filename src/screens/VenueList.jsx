@@ -52,18 +52,18 @@ const VenueList = () => {
     }
   };
 
-  const saveFavoritesToStorage = async () => {
-    try {
-      await AsyncStorage.setItem('favorites', JSON.stringify(favorites));
-      console.log('Favorites saved successfully');
-    } catch (e) {
-      console.log('Error saving favorites:', e);
-    }
-  };
+  // const saveFavoritesToStorage = async () => {
+  //   try {
+  //     await AsyncStorage.setItem('favorites', JSON.stringify(favorites));
+  //     console.log('Favorites saved successfully');
+  //   } catch (e) {
+  //     console.log('Error saving favorites:', e);
+  //   }
+  // };
 
-  useEffect(() => {
-    saveFavoritesToStorage();
-  }, [favorites]);
+  // useEffect(() => {
+  //   saveFavoritesToStorage();
+  // }, [favorites]);
 
   // console.log(favorites)
   
